@@ -1,9 +1,9 @@
-import { useRef } from 'react';
-import moon from './moon.png';
-import land from './land.png';
-import cat from './cat.gif';
+import { useRef } from "react";
+import moon from "./moon.png";
+import land from "./land.png";
+import cat from "./niklas.gif";
 
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 function App() {
   const ref = useRef();
@@ -25,7 +25,7 @@ function App() {
           factor={2}
           style={{
             backgroundImage: `url(${moon})`,
-            backgroundSize: 'cover',
+            backgroundSize: "cover",
           }}
         />
 
@@ -35,13 +35,13 @@ function App() {
           factor={4}
           style={{
             backgroundImage: `url(${land})`,
-            backgroundSize: 'cover',
+            backgroundSize: "cover",
           }}
         ></ParallaxLayer>
 
         <ParallaxLayer
           sticky={{ start: 0.9, end: 2.5 }}
-          style={{ textAlign: 'center' }}
+          style={{ textAlign: "center" }}
         >
           <img src={cat} />
         </ParallaxLayer>
