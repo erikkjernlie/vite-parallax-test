@@ -1,7 +1,9 @@
 import { useRef } from "react";
-import moon from "./niklas.png";
+import niklasBaris from "./nikky.png";
 import land from "./land.png";
 import cat from "./niklas.gif";
+import niklas from "./niklas.png";
+import knerten from "./knerten.png";
 import Confetti from "react-confetti";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
@@ -30,27 +32,42 @@ function App() {
           speed={1}
           factor={2}
           style={{
-            backgroundImage: `url(${moon})`,
+            backgroundImage: `url(${niklasBaris})`,
             backgroundSize: "contain",
           }}
         />
 
         <ParallaxLayer
-          offset={2}
+          offset={3}
           speed={1}
           factor={4}
           style={{
-            backgroundImage: `url(${land})`,
-            backgroundSize: "cover",
+            backgroundImage: `url(${cat})`,
+            backgroundSize: "contain",
+          }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          offset={1}
+          speed={1}
+          factor={4}
+          style={{
+            backgroundImage: `url(${knerten})`,
+            backgroundSize: "contain",
+            maxSize: "50vh",
           }}
         ></ParallaxLayer>
 
-        <ParallaxLayer
+        {/*<ParallaxLayer
           sticky={{ start: 0.9, end: 2.5 }}
           style={{ textAlign: "center", width: "100%" }}
         >
-          <img src={cat} />
-        </ParallaxLayer>
+          <img
+            src={cat}
+            style={{
+              width: "80vw",
+            }}
+          />
+          </ParallaxLayer>*/}
 
         <ParallaxLayer
           offset={0.2}
