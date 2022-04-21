@@ -59,6 +59,8 @@ function App() {
             fontWeight: "bold",
             fontSize: 25,
             paddingTop: "3vh",
+            paddingLeft: "10vw",
+            paddingRight: "10vw",
           }}
         >
           Turist gir Northug spurt-sjokk @ 13. Februar 2022
