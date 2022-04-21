@@ -1,18 +1,21 @@
 import { useRef } from "react";
-import niklasBaris from "./nikky.png";
-import land from "./land.png";
-import cat from "./niklas.gif";
-import niklas from "./niklas.png";
-import knerten from "./knerten.png";
 import Confetti from "react-confetti";
-
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import niklasBaris from "./nikky.png";
+import gif from "./niklas.gif";
 
 function App() {
   const ref = useRef();
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: `url(${niklasBaris})`,
+        backgroundSize: "cover",
+        width: "100vw",
+        height: "100vh",
+        backgroundPosition: "center",
+      }}
+    >
       <div
         style={{
           position: "absolute",
@@ -26,48 +29,89 @@ function App() {
         <Confetti></Confetti>
       </div>
 
-      <Parallax pages={4} ref={ref}>
+      <div
+        style={{
+          bottom: 0,
+          paddingBottom: "3vh",
+          position: "absolute",
+          color: "white",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          backgroundColor: "rgba(0,0,0,0.3)",
+          flexDirection: "column",
+        }}
+      >
+        <img
+          src={gif}
+          style={{
+            width: "100vw",
+          }}
+        />
+        <a
+          href="https://www.tv2.no/v/1724513/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            fontSize: 25,
+            paddingTop: "3vh",
+          }}
+        >
+          Turist gir Northug spurt-sjokk @ 13. Februar 2022
+        </a>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+/*
+
+     <Parallax pages={3} ref={ref}>
         <ParallaxLayer
           offset={0}
           speed={1}
-          factor={2}
           style={{
             backgroundImage: `url(${niklasBaris})`,
-            backgroundSize: "contain",
+            backgroundSize: "cover",
+            width: "100%",
           }}
         />
-
-        <ParallaxLayer
-          offset={3}
-          speed={1}
-          factor={4}
-          style={{
-            backgroundImage: `url(${cat})`,
-            backgroundSize: "contain",
-          }}
-        ></ParallaxLayer>
         <ParallaxLayer
           offset={1}
           speed={1}
-          factor={4}
           style={{
             backgroundImage: `url(${knerten})`,
             backgroundSize: "contain",
-            maxSize: "50vh",
+          }}
+        ></ParallaxLayer>
+        <ParallaxLayer
+          offset={2}
+          speed={1}
+          style={{
+            backgroundImage: `url(${gif})`,
+            backgroundSize: "contain",
           }}
         ></ParallaxLayer>
 
-        {/*<ParallaxLayer
-          sticky={{ start: 0.9, end: 2.5 }}
-          style={{ textAlign: "center", width: "100%" }}
-        >
-          <img
-            src={cat}
-            style={{
-              width: "80vw",
-            }}
-          />
-          </ParallaxLayer>*/}
+        {
+          <ParallaxLayer
+            sticky={{ start: 0.9, end: 1.5 }}
+            style={{ textAlign: "center", width: "100%" }}
+          >
+            <img
+              src={gif}
+              style={{
+                width: "80vw",
+              }}
+            />
+          </ParallaxLayer>
+        }
 
         <ParallaxLayer
           offset={0.2}
@@ -78,15 +122,11 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
+          offset={2}
           speed={2}
           onClick={() => ref.current.scrollTo(0)}
         >
           <h2>Grattis med dagen</h2>
         </ParallaxLayer>
       </Parallax>
-    </div>
-  );
-}
-
-export default App;
+*/
