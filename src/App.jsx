@@ -28,6 +28,42 @@ function App() {
       >
         <Confetti></Confetti>
       </div>
+      <div
+        style={{
+          zIndex: 1,
+          position: "absolute",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <div
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            fontSize: 25,
+            paddingTop: "3vh",
+            textAlign: "center",
+          }}
+        >
+          Gratulerer så mye med dagen Niklas 🔥
+        </div>
+        <div
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            fontSize: 16,
+            paddingTop: "1vh",
+            maxWidth: 500,
+            textAlign: "center",
+          }}
+        >
+          Her har du 10 år med www.niklashovland.com slik at alle som googler
+          navnet ditt finner ut at du slo Northug i spurt ❤️ Hihi
+        </div>
+      </div>
 
       <div
         style={{
